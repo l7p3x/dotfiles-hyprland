@@ -1,7 +1,3 @@
---- README.md (原始)
-
-
-+++ README.md (修改后)
 # Hyprland Dotfiles
 
 Minimalist Hyprland (Wayland) configuration focused on aesthetics and functionality.
