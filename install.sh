@@ -54,4 +54,4 @@ tar -xzf "$TMP_DIR/YAMIS/monochrome-icon-theme.tar.gz" -C "$ICON_DEST"
 rm -rf "$TMP_DIR"
 
 echo "Installation complete."
-echo REPO_URL
+echo $REPO_URL
