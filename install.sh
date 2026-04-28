@@ -33,7 +33,6 @@ tar -xzf "$TMP_DIR/YAMIS/monochrome-icon-theme.tar.gz" -C "$DEST"
 # limpeza
 rm -rf "$TMP_DIR"
 
-+++ install.sh (修改后)
 #!/usr/bin/env bash
 set -e
 
