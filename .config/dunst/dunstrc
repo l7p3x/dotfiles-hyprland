@@ -67,11 +67,11 @@
     foreground = "#ffffff"
     frame_color = "#ffffff"
     timeout = 10
-    icon = /home/xzy/.config/dunst/normal.png
+    icon = /.config/dunst/normal.png
 
 [urgency_critical]
     background = "#00000099"
     foreground = "#fb2b2b"
     frame_color = "#a21414"
     timeout = 0
-    icon = /home/xzy/.config/dunst/critical.png
+    icon = /.config/dunst/critical.png
