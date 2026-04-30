@@ -10,11 +10,6 @@
     "modules-left": [
         "hyprland/workspaces",
         "custom/spotifytitle",
-        "custom/steam", 
-        "custom/codium",
-        "custom/torbrowser",
-        "custom/gimp",
-        "custom/discord"
        /* "hyprland/window" */
     ],
     "modules-center": [
@@ -53,37 +48,6 @@
         "on-scroll-up": "playerctl --player=spotify next 2> /dev/null",
         "on-scroll-down": "playerctl --player=spotify previous 2> /dev/null",
         "on-update": "~/.local/bin/spotify-notify"
-    },
-    
-    /* --- DOCK / APPS DE FÁCIL ACESSO (Novos Módulos Custom) --- */
-    "custom/steam": {
-        "format": "",
-        "on-click": "steam",
-        "tooltip": false
-    },
-
-        "custom/codium": {
-        "format": "",
-        "on-click": "codium",
-        "tooltip": false
-    },
-
-        "custom/torbrowser": {
-        "format": "",
-        "on-click": "tor-browser",
-        "tooltip": false
-    },
-
-        "custom/gimp": {
-        "format": "<span size='130%'></span>",
-        "on-click": "gimp",
-        "tooltip": false
-    },
-
-        "custom/discord": {
-        "format": " ",
-        "on-click": "discord",
-        "tooltip": false
     },
 
     /* "hyprland/window": {
@@ -172,6 +136,6 @@
         "format-ethernet": " ",
         "format-disconnected": "󰈂 ",
         "tooltip-format": "{ifname} ({signalStrength}%)", // Info básica
-        "on-click": "nm-connection-editor" // Script para o menu sanfona
+        "on-click": "nm-connection-editor"
     }
 }
