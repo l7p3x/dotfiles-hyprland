@@ -18,12 +18,12 @@ keyword general:border_size 1;\
 keyword decoration:rounding 0"
 
     dunstify -r "$RID" -u normal -a "GamemodeON" \
-    --icon=/home/xzy/.config/dunst/gamemodeON.png \
+    --icon=$HOME/.config/dunst/gamemodeON.png \
     "Gamemode [ON]" "Modo de desempenho ativado."
 
 else
 dunstify -r "$RID" -u normal -a "GamemodeOFF" \
-    --icon=/home/xzy/.config/dunst/gamemodeOFF.png \
+    --icon=$HOME/.config/dunst/gamemodeOFF.png \
     "Gamemode [OFF]" "Modo de desempenho desativado."
 
     hyprctl reload
