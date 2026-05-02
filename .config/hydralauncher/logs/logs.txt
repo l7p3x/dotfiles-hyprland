@@ -1,2 +1,0 @@
-[2026-05-02 14:36:09.927] [warn]  (main)         WS disconnected due to auth-failed
-[2026-05-02 14:36:10.929] [warn]  (main)         WS disconnected due to auth-failed

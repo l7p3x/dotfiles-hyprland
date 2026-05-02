@@ -1,7 +1,12 @@
 *.log
 *.tmp
+*.swp
+*.swo
+*~
+
 *.cache
 .cache/
+
 **/Cache/
 **/Code Cache/
 **/GPUCache/
@@ -11,21 +16,9 @@
 **/SharedStorage/
 **/Trust Tokens/
 
-mozilla/firefox/*/storage/
-mozilla/firefox/*/cache2/
-mozilla/firefox/*/crashes/
-mozilla/firefox/*/minidumps/
-
-zen/*/storage/
-zen/*/cache2/
-zen/*/crashes/
-
-.config/hydralauncher/Cache/
-.config/hydralauncher/Code Cache/
-.config/hydralauncher/GPUCache/
-.config/hydralauncher/DawnGraphiteCache/
-.config/hydralauncher/DawnWebGPUCache/
-.config/hydralauncher/logs/
+mozilla/
+zen/
+hydralauncher/
 
 gtk-4.0/assets/
 gtk-4.0/*.cache
@@ -39,7 +32,3 @@ waybar/*.log
 
 xfce4/**/Thunar/*.history
 xfce4/**/Thunar/*.tmp
-
-*.swp
-*.swo
-*~
