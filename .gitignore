@@ -1,37 +1,20 @@
-#Ícones e temas visuais
-.icons/
-icons/YAMIS/
-
-# Backups e temporários
 *.bak
 *.swp
 *~
 *.tmp
-
-# Cache
 .cache/
 *.log
 .DS_Store
-
-# Binários locais
 .local/bin/*
 !.local/bin/.gitkeep
-
-# Logs and temp files
 *.log
 *.tmp
 *.swp
-
-# Environment
 .env
 .env.local
 .env.*
-
-# Editors
 .vscode/
 .idea/
-
-# Dependencies
 node_modules/
 venv/
 .venv/
@@ -42,12 +25,8 @@ dist/
 build/
 target/
 .gradle/
-
-# System files
 .DS_Store
 Thumbs.db
-
-# Compiled files
 *.pyc
 *.class
 *.o
@@ -57,13 +36,9 @@ Thumbs.db
 *.a
 *.obj
 *.out
-
-# Coverage
 coverage/
 htmlcov/
 .coverage
-
-# Compressed files
 *.zip
 *.gz
 *.tar
