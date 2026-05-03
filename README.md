@@ -126,16 +126,13 @@ Utilities:
 - zsh
 - nwg-look
 - xsettingsd
-
-Optional:
-- zen-browser or firefox
-- spotify
+- zen-browser
 
 ---
 
 ## Repository Structure
 
-\`\`\`text
+```text
 .
 ├── .zshrc
 ├── .gtkrc-2.0
@@ -159,7 +156,7 @@ Optional:
 ├── install.sh
 ├── README.md
 └── .gitignore
-\`\`\`
+```
 
 ---
 
