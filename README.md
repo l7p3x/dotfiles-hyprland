@@ -122,10 +122,10 @@ If you prefer to do everything manually:
 
 - ## Preview
 
-| Desktop | Terminal |
+| Launcher | Terminal |
 |---|---|
 | ![Launcher](screenshots/hyprshot1.png) | ![Terminal](screenshots/hyprshot2.png) |
 
-| Fuzzel | Alt desktop |
+| Zen Browser | Zeditor |
 |---|---|
 | ![Zen Browser](screenshots/hyprshot3.png) | ![Zeditor](screenshots/hyprshot4.png) |
