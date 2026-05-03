@@ -683,7 +683,7 @@ run_deploy() {
   local THEME="Reversal-Dark"
   local ICONS="yet-another-monochrome-icon-set"
   local CURSOR="qogir-white-cursors"
-  local FONT="JetBrainsMono Nerd Font 11"
+  # local FONT="JetBrainsMono Nerd Font 11"
 
   # GTK 3 settings.ini
   local gtk3_settings="$HOME/.config/gtk-3.0/settings.ini"
@@ -692,7 +692,7 @@ run_deploy() {
       -e "s|^gtk-theme-name=.*|gtk-theme-name=$THEME|" \
       -e "s|^gtk-icon-theme-name=.*|gtk-icon-theme-name=$ICONS|" \
       -e "s|^gtk-cursor-theme-name=.*|gtk-cursor-theme-name=$CURSOR|" \
-      -e "s|^gtk-font-name=.*|gtk-font-name=$FONT|" \
+      # -e "s|^gtk-font-name=.*|gtk-font-name=$FONT|" \
       "$gtk3_settings"
     ok "gtk-3.0/settings.ini updated."
   else
@@ -703,7 +703,7 @@ run_deploy() {
 gtk-theme-name=$THEME
 gtk-icon-theme-name=$ICONS
 gtk-cursor-theme-name=$CURSOR
-gtk-font-name=$FONT
+# gtk-font-name=$FONT
 gtk-application-prefer-dark-theme=1
 EOF
     }
@@ -717,7 +717,7 @@ EOF
       -e "s|^gtk-theme-name=.*|gtk-theme-name=$THEME|" \
       -e "s|^gtk-icon-theme-name=.*|gtk-icon-theme-name=$ICONS|" \
       -e "s|^gtk-cursor-theme-name=.*|gtk-cursor-theme-name=$CURSOR|" \
-      -e "s|^gtk-font-name=.*|gtk-font-name=$FONT|" \
+      # -e "s|^gtk-font-name=.*|gtk-font-name=$FONT|" \
       "$gtk4_settings"
     ok "gtk-4.0/settings.ini updated."
   else
@@ -728,7 +728,7 @@ EOF
 gtk-theme-name=$THEME
 gtk-icon-theme-name=$ICONS
 gtk-cursor-theme-name=$CURSOR
-gtk-font-name=$FONT
+# gtk-font-name=$FONT
 gtk-application-prefer-dark-theme=1
 EOF
     }
@@ -759,7 +759,7 @@ EOF
         gsettings set org.gnome.desktop.interface gtk-theme    "$THEME"      2>/dev/null || true
         gsettings set org.gnome.desktop.interface icon-theme   "$ICONS"      2>/dev/null || true
         gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR"     2>/dev/null || true
-        gsettings set org.gnome.desktop.interface font-name    "$FONT"       2>/dev/null || true
+        # gsettings set org.gnome.desktop.interface font-name    "$FONT"       2>/dev/null || true
         gsettings set org.gnome.desktop.interface color-scheme "prefer-dark" 2>/dev/null || true
       else
         echo -e "\033[2m     [dry] gsettings set gtk-theme=$THEME | icon-theme=$ICONS | cursor-theme=$CURSOR\033[0m"
