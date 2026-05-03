@@ -97,15 +97,29 @@ The installer can deploy files in two modes:
 
 ```text
 .
-├── .bashrc              # Shell configuration with custom prompt
-├── .blerc               # Ble.sh configuration
+.
+├── .zshrc               # Zsh configuration
+├── .gtkrc-2.0           # GTK2 theme settings
 ├── .config/
-│   ├── hypr/            # Hyprland configurations
-│   ├── waybar/          # Bar configuration
+│   ├── hypr/            # Hyprland configurations (modularized)
+│   │   ├── conf/        # Split configs (appearance, input, binds, etc)
+│   │   └── assets/      # Helper scripts (gamemode, toggle)
+│   ├── waybar/          # Bar configuration (JSON + CSS)
 │   ├── foot/            # Terminal emulator settings
-│   └── dunst/           # Notification daemon
+│   ├── mako/            # Notification daemon (Wayland)
+│   ├── btop/            # Resource monitor config
+│   ├── gtk-3.0/         # GTK3 settings
+│   ├── gtk-4.0/         # GTK4 settings
+│   ├── Thunar/          # File manager config
+│   ├── xfce4/           # Thunar integration (xfconf)
+│   ├── nwg-look/        # GTK theming tool config
+│   ├── xsettingsd/      # X settings daemon
+│   └── zed/             # Zed editor config
 ├── Wallpapers/          # Wallpaper collection
-└── install.sh           # Installation script
+├── screenshots/         # Desktop previews
+├── install.sh           # Installation script
+├── README.md            # Documentation
+└── .gitignore           # Git ignore rules
 ```
 
 ## Manual Installation
