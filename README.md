@@ -119,3 +119,13 @@ If you prefer to do everything manually:
 ## Notes
 - Primarily designed for **Arch-based** distributions.
 - Use `--dry-run` to preview all actions before applying them.
+
+- ## Preview
+
+| Desktop | Terminal |
+|---|---|
+| ![Desktop](screenshots/hyprshot1.png) | ![Terminal](screenshots/hyprshot2.png) |
+
+| Fuzzel | Alt desktop |
+|---|---|
+| ![Fuzzel](screenshots/hyprshot3.png) | ![Desktop 2](screenshots/hyprshot4.png) |
