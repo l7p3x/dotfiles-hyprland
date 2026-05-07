@@ -21,11 +21,10 @@ This setup is designed to be lightweight, modular, and easy to maintain.
 ### Keybindings (ALT as main modifier)
 - ALT + T: Open terminal (Foot)
 - ALT + E: Open file manager (Thunar)
-- ALT + R: Open app launcher (Hyprlauncher)
+- ALT + D: Open app launcher (Hyprlauncher)
 - ALT + F: Open browser (Zen Browser / Firefox)
 - ALT + Q: Close active window
 - ALT + V: Toggle floating mode
-- ALT + S: Toggle scratchpad (Spotify workspace)
 - WIN + R: Reload Hyprland configuration
 - WIN + F1: Toggle gamemode
 - ALT + 1-0: Switch workspaces
