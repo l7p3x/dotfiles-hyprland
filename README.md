@@ -33,7 +33,6 @@ This setup is designed to be lightweight, modular, and easy to maintain.
 ---
 
 ### System Features
-- Spotify scratchpad on a dedicated workspace
 - Screenshot support via hyprshot
 - Gamemode toggle with notification feedback
 - System monitor (btop)
