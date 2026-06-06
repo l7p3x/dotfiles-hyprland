@@ -1,134 +1,105 @@
-# Hyprland Dotfiles
+<div align="center">
+  <img src="screenshots/hyprshot1.png" alt="Hyprland Preview" width="100%">
+  <h1>Hyprland Dotfiles</h1>
+  <p>A minimalist and reproducible Hyprland (Wayland) configuration focused on aesthetics, performance, simplicity, and a clean user experience.</p>
+</div>
 
-A minimalist and reproducible Hyprland (Wayland) configuration focused on aesthetics, performance, simplicity, and a clean user experience.
-
-This setup is designed to be lightweight, modular, and easy to maintain.
-
-## Table of Contents
-- [Features](#features)
-- [Components](#components)
-- [Installation](#installation)
-- [Dependencies](#dependencies)
-- [Repository Structure](#repository-structure)
-- [Manual Installation](#manual-installation)
-- [Notes](#notes)
-- [Preview](#preview)
+<p align="center">
+  <a href="#installation"><img src="https://img.shields.io/badge/Hyprland-Dotfiles-blue.svg" alt="Hyprland Dotfiles"></a>
+  <a href="https://github.com/YOUR_USER/dotfiles-hyprland/stargazers"><img src="https://img.shields.io/github/stars/YOUR_USER/dotfiles-hyprland.svg" alt="GitHub stars"></a>
+</p>
 
 ---
+
+## Overview
+
+**Hyprland Dotfiles** is a modern, minimalist Wayland configuration designed to stay out of your way while looking distinctive. Built around clean design principles, it emphasizes clarity, smooth motion, and simplicity.
+
+It features a sleek dark interface, a fluid user experience, and subtle visual details that make your desktop both beautiful and functional. This setup is designed to be lightweight, modular, and easy to maintain.
 
 ## Features
 
-### Keybindings (ALT as main modifier)
-- ALT + T: Open terminal (Foot)
-- ALT + E: Open file manager (Thunar)
-- ALT + D: Open app launcher (Hyprlauncher)
-- ALT + F: Open browser (Zen Browser / Firefox)
-- ALT + Q: Close active window
-- ALT + V: Toggle floating mode
-- WIN + R: Reload Hyprland configuration
-- WIN + F1: Toggle gamemode
-- ALT + 1-0: Switch workspaces
-- ALT + SHIFT + 1-0: Move window to workspace
+- **Smooth Animations**: Rounded corners, blur effects, and transparent inactive windows.
+- **Dark Minimalist Interface**: Easy on the eyes with a clean, modern aesthetic.
+- **Session Selector**: Integrated and intuitive workspace switching.
+- **Power Controls**: Quick access to system monitor, launcher, and file manager.
+- **Highly Customizable**: Modular Hyprland config, GTK theming via nwg-look + xsettingsd.
 
----
+### Preview
 
-### System Features
-- Screenshot support via hyprshot
-- Gamemode toggle with notification feedback
-- System monitor (btop)
-- Modular Hyprland config
-- GTK theming via nwg-look + xsettingsd
+<div align="center">
 
----
+| Launcher | Terminal |
+|---|---|
+| ![](screenshots/hyprshot1.png) | ![](screenshots/hyprshot2.png) |
+| Browser | Editor |
+|---|---|
+| ![](screenshots/hyprshot3.png) | ![](screenshots/hyprshot4.png) |
 
-### Appearance
-- Rounded corners (8px)
-- Blur effects enabled
-- Transparent inactive windows
-- Custom cursor (Qogir)
-- GTK theming (GTK2/3/4)
-- Clean Waybar styling
-
----
-
-## Components
-
-- Window Manager: Hyprland
-- Bar: Waybar
-- Terminal: Foot
-- Notifications: Mako
-- Shell: Zsh
-- File Manager: Thunar
-- System Monitor: btop
-
----
+</div>
 
 ## Installation
 
-Clone the repository:
-
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USER/dotfiles-hyprland.git ~/.local/share/dotfiles-hyprland
+git clone https://github.com/l7p3x/dotfiles-hyprland.git ~/.local/share/dotfiles-hyprland
 cd ~/.local/share/dotfiles-hyprland
-./install.sh
 ```
 
-Default behavior:
-bootstrap + install
+### 2. Install the Dotfiles
+Run the installer with the desired deployment mode:
+```bash
+./install.sh
+```
+Default behavior: bootstrap + install.
 
----
+### 3. Deployment Modes
 
-### Deployment Modes
-
-- default → copies files to \$HOME
-- --symlink → creates symlinks
-
-⚠️ Do not move the repo if using symlinks.
-
----
-
-### Installer Commands
+| Command | Description |
+|--------|------------|
+| `(none)` | Full auto |
+| `bootstrap` | Install dependencies |
+| `install` | Deploy dotfiles |
+| `update` | Update files |
+| `rollback` | Restore backup |
+| `status` | Show state |
 
 ```bash
 ./install.sh [command]
 ```
 
-| Command | Description |
-|--------|------------|
-| (none) | Full auto |
-| bootstrap | Install dependencies |
-| install | Deploy dotfiles |
-| update | Update files |
-| rollback | Restore backup |
-| status | Show state |
+> **Warning:** Use `--dry-run` before applying changes. Do not move the repo if using `--symlink`.
 
----
+### 4. Manual Installation
+```bash
+cp -r .config/* ~/.config/
+cp .zshrc ~/
+cp .gtkrc-2.0 ~/
+mkdir -p ~/Pictures/Wallpapers
+cp Wallpapers/* ~/Pictures/Wallpapers/
+```
 
-## Dependencies
+## Customization
 
-Core:
-- hyprland
-- waybar
-- foot
-- mako
+### Keybindings (ALT as main modifier)
 
-Hypr ecosystem:
-- hyprpaper
-- hypridle
-- hyprlauncher
+| Keybind | Action |
+|--------|--------|
+| ALT + T | Open terminal (Foot) |
+| ALT + E | Open file manager (Thunar) |
+| ALT + D | Open app launcher (Hyprlauncher) |
+| ALT + F | Open browser (Zen Browser / Firefox) |
+| ALT + Q | Close active window |
+| ALT + V | Toggle floating mode |
+| WIN + R | Reload Hyprland configuration |
+| WIN + F1 | Toggle gamemode |
+| ALT + 1-0 | Switch workspaces |
+| ALT + SHIFT + 1-0 | Move window to workspace |
 
-Utilities:
-- thunar
-- btop
-- hyprshot
-- zsh
-- nwg-look
-- xsettingsd
-- zen-browser
+*Looking for advanced tweaks?*
+Animations, layout, and behavior require editing the Hyprland config files directly inside `.config/hypr/conf/`.
 
----
-
-## Repository Structure
+## Directory Structure
 
 ```text
 .
@@ -156,34 +127,33 @@ Utilities:
 └── .gitignore
 ```
 
----
+## Dependencies
 
-## Manual Installation
+**Core:**
+- hyprland
+- waybar
+- foot
+- mako
 
-```Bash
-cp -r .config/* ~/.config/
-cp .zshrc ~/
-cp .gtkrc-2.0 ~/
-mkdir -p ~/Pictures/Wallpapers
-cp Wallpapers/* ~/Pictures/Wallpapers/
+**Hypr ecosystem:**
+- hyprpaper
+- hypridle
+- hyprlauncher
+
+**Utilities:**
+- thunar
+- btop
+- hyprshot
+- zsh
+- nwg-look
+- xsettingsd
+- zen-browser
+
+## Uninstallation
+
+To remove the dotfiles, delete the repo and restore your previous configs:
+
+```bash
+rm -rf ~/.local/share/dotfiles-hyprland
 ```
-
----
-
-## Notes
-
-- Optimized for Arch-based systems
-- Modular and easy to tweak
-- Use --dry-run before applying changes
-
----
-
-## Preview
-
-| Launcher | Terminal |
-|---|---|
-| ![](screenshots/hyprshot1.png) | ![](screenshots/hyprshot2.png) |
-
-| Browser | Editor |
-|---|---|
-| ![](screenshots/hyprshot3.png) | ![](screenshots/hyprshot4.png) |
+Then use `rollback` if you ran the installer, or manually restore your previous `~/.config` entries.
