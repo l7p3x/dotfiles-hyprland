@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="screenshots/hyprshot1.png" alt="Hyprland Preview" width="100%">
+  <img src="screenshots/hyprshot2.png" alt="Hyprland Preview" width="100%">
   <h1>Hyprland Dotfiles</h1>
   <p>A minimalist and reproducible Hyprland (Wayland) configuration focused on aesthetics, performance, simplicity, and a clean user experience.</p>
 </div>
