@@ -30,7 +30,7 @@ ok()      { echo -e "${C_GREEN}${C_BOLD}  ✓${C_RESET}  $*"; }
 skip()    { echo -e "${C_DIM}  -  $*${C_RESET}"; }
 warn()    { echo -e "${C_YELLOW}${C_BOLD}  !${C_RESET}  $*"; }
 err()     { echo -e "${C_RED}${C_BOLD}  ✗${C_RESET}  $*" >&2; }
-section() { echo -e "\n${C_CYAN}${C_BOLD}---  $*  ---${C_RESET}"; }
+section() { echo -e "\n${C_CYAN}${C_BOLD}━━━  $*  ━━━${C_RESET}"; }
 changed() { echo -e "${C_MAGENTA}${C_BOLD}  ~${C_RESET}  $*"; }
 ask()     { echo -en "${C_YELLOW}${C_BOLD}  ?${C_RESET}  $*"; }
 
@@ -81,7 +81,7 @@ Usage:  $(basename "$0") [COMMAND] [OPTIONS]
 
 Commands:
   (none)              Full auto: bootstrap + install (recommended for new users)
-  bootstrap           Install base system from scratch (base-devel -> yay -> core)
+  bootstrap           Install base system from scratch (base-devel → yay → core)
   install             Deploy dotfiles
   update              Re-deploy only changed files
   rollback            Restore last backed-up files
@@ -187,7 +187,7 @@ safe_backup() {
     [[ -e "$bak" ]] && rm -rf "$bak"
     run mv "$target" "$bak"
     state::append "backup.index" "$target|$bak"
-    warn "Backed up: $(basename "$target") -> $bak"
+    warn "Backed up: $(basename "$target") → $bak"
   else
     run rm -rf "$target"
     skip "Removed (--no-backup): $target"
@@ -239,7 +239,7 @@ check_required_bins() {
 #  Goal: raw Arch install → yay → packages → icons → theme → zsh
 # =============================================================================
 cmd_bootstrap() {
-  section "Bootstrap — Arch base -> yay -> packages"
+  section "Bootstrap — Arch base → yay → packages"
 
   ! command -v pacman &>/dev/null && { err "pacman not found. Arch only."; exit 1; }
   [[ "$EUID" -eq 0 ]]             && { err "Do not run as root. sudo is used internally."; exit 1; }
@@ -330,7 +330,7 @@ cmd_bootstrap() {
     fi
     trap - EXIT
     run rm -rf "$tmp_icons"
-    ok "Icons installed -> $ICONS_DEST"
+    ok "Icons installed → $ICONS_DEST"
     state::log "BOOTSTRAP icons installed"
   fi
 
@@ -351,7 +351,7 @@ cmd_bootstrap() {
     fi
     trap - EXIT
     run rm -rf "$tmp_theme"
-    ok "Theme installed -> $THEME_DEST"
+    ok "Theme installed → $THEME_DEST"
     state::log "BOOTSTRAP theme installed"
   fi
 
@@ -366,7 +366,7 @@ cmd_bootstrap() {
   fi
 
   # ── B7: zsh as default shell ───────────────────────────────────────────────
-  section "B7 · Default shell -> zsh"
+  section "B7 · Default shell → zsh"
 
   if command -v zsh &>/dev/null; then
     local zsh_bin; zsh_bin="$(command -v zsh)"
@@ -379,7 +379,7 @@ cmd_bootstrap() {
     local current_shell; current_shell="$(getent passwd "$USER" | cut -d: -f7)"
     if [[ "$current_shell" != "$zsh_bin" ]]; then
       run chsh -s "$zsh_bin" "$USER"
-      ok "Default shell -> zsh (re-login required)"
+      ok "Default shell → zsh (re-login required)"
       state::log "SHELL changed to zsh"
     else
       skip "Shell already zsh."
@@ -631,7 +631,7 @@ run_deploy() {
 
     if [[ -n "$first_wall" ]]; then
       local wall_name; wall_name="$(basename "$first_wall")"
-      ok "Wallpaper -> $wall_name"
+      ok "Wallpaper → $wall_name"
       info "$wall_count wallpaper(s) available in $WALL_DST"
       state::set "wallpaper.current" "$first_wall"
 
@@ -648,12 +648,12 @@ run_deploy() {
       warn "No wallpapers (.png/.jpg) found in $WALL_DST."
     fi
 
-    ok "Wallpapers synced -> $WALL_DST"
+    ok "Wallpapers synced → $WALL_DST"
   else
     warn "No Wallpapers/ directory in repo — skipping."
   fi
 
-  # ── 6 · Scripts -> ~/.local/bin ───────────────────────────────────────────
+  # ── 6 · Scripts → ~/.local/bin ───────────────────────────────────────────
   section "6 · Scripts"
   local BIN_SRC="$SCRIPT_DIR/.local/bin"
   if [[ -d "$BIN_SRC" ]]; then
@@ -808,7 +808,7 @@ Name=Default
 Comment=Default cursor
 Inherits=$CURSOR
 XCURSOR
-  ok "Xcursor default -> $CURSOR"
+  ok "Xcursor default → $CURSOR"
 
   # Hyprland cursor env vars
   local hyprland_conf="$HOME/.config/hypr/hyprland.conf"
@@ -858,7 +858,7 @@ cmd_install() {
   echo ""
   echo -e "  ${C_BOLD}Next steps:${C_RESET}"
   echo -e "  ${C_DIM}1. Log out and back in (shell + session changes)${C_RESET}"
-  echo -e "  ${C_DIM}2. Start Hyprland -> check waybar, mako, foot${C_RESET}"
+  echo -e "  ${C_DIM}2. Start Hyprland → check waybar, mako, foot${C_RESET}"
   echo -e "  ${C_DIM}3. $(basename "$0") status — inspect state anytime${C_RESET}"
   echo ""
   echo -e "${C_YELLOW}${C_BOLD}  ! Note${C_RESET}"
