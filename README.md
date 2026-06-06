@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="#installation"><img src="https://img.shields.io/badge/Hyprland-Dotfiles-blue.svg" alt="Hyprland Dotfiles"></a>
-  <a href="https://github.com/YOUR_USER/dotfiles-hyprland/stargazers"><img src="https://img.shields.io/github/stars/YOUR_USER/dotfiles-hyprland.svg" alt="GitHub stars"></a>
+  <a href="https://github.com/l7p3x/dotfiles-hyprland/stargazers"><img src="https://img.shields.io/github/stars/l7p3x/dotfiles-hyprland.svg" alt="GitHub stars"></a>
 </p>
 
 ---
